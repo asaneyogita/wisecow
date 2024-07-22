@@ -4,11 +4,14 @@ FROM alpine:latest
 # Set the working directory inside the container
 WORKDIR /app
 
+#Install prerequisites 
+RUN sudo apt install fortune-mod cowsay -y
+
 #Copy the .sh file from your local host to the container
 COPY wisecow.sh .
 
 #Make the script executable
-RUN chmod +x 777 wisecow.sh
+RUN chmod -R 755 wisecow.sh
 
 # which user can run the script
 USER root
