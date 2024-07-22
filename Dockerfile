@@ -5,7 +5,7 @@ FROM alpine:latest
 WORKDIR /app
 
 #Install prerequisites 
-RUN sudo apt install fortune-mod cowsay -y
+RUN apt install fortune-mod cowsay -y
 
 #Copy the .sh file from your local host to the container
 COPY wisecow.sh .
