@@ -11,7 +11,7 @@ RUN sudo apt install fortune-mod cowsay -y
 COPY wisecow.sh .
 
 #Make the script executable
-RUN chmod -R 755 wisecow.sh
+RUN chmod +x wisecow/wisecow.sh
 
 # which user can run the script
 USER root
